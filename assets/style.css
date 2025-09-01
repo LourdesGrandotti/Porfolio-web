@@ -1,0 +1,201 @@
+/* ================================
+   ESTILOS PORTFOLIO - LOURDES
+   ================================ */
+
+/* Paleta */
+:root {
+  --color-primario: #4a90e2;
+  --color-secundario: #50e3c2;
+  --color-fondo: #f9f9f9;
+  --color-texto: #333;
+  --color-footer: #222;
+  --font-main: 'Roboto', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: var(--font-main);
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+  text-align: center;
+  padding: 3rem 1rem;
+  color: white;
+}
+
+.perfil-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.frase {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.btn-cv {
+  background: white;
+  color: var(--color-primario);
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.btn-cv:hover {
+  background: var(--color-primario);
+  color: white;
+}
+
+/* Secciones */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section:nth-child(even) {
+  background: #fff;
+}
+
+.section:nth-child(odd) {
+  background: #f0f4f8;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-primario);
+}
+
+/* Proyectos */
+.proyecto {
+  max-width: 340px;
+  margin: 1.5rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.proyecto img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.btn-ver {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background: var(--color-primario);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-ver:hover {
+  background: var(--color-secundario);
+}
+
+/* Habilidades */
+#habilidades ul {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+#habilidades li {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+/* Contacto */
+#contacto a {
+  color: var(--color-primario);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contacto a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--color-footer);
+  color: white;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* Contenedor de proyectos en grilla */
+
+
+#habilidades ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#habilidades li {
+  flex: 1 1 200px;
+  text-align: center;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-weight: bold;
+}
