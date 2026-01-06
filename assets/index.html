@@ -10,6 +10,10 @@
 
   <!-- Header -->
   <header>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+      <span class="sun-icon">☀️</span>
+      <span class="moon-icon">🌙</span>
+    </button>
     <div class="header-container">
       <img src="images/profile/trabajo2.jpg" alt="Foto Lourdes" class="perfil-img">
       <h1>Grandotti Lourdes Priscila</h1>
@@ -70,5 +74,28 @@
     <p>© 2025 Grandotti Lourdes Priscila</p>
   </footer>
 
+  <script>
+  // Toggle de tema oscuro/claro
+  const themeToggle = document.getElementById('theme-toggle');
+  const body = document.body;
+
+  // Verificar preferencia guardada
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+  }
+
+  // Cambiar tema al hacer clic
+  themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    // Guardar preferencia
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+</script>
 </body>
 </html>
