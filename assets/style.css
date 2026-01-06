@@ -90,15 +90,6 @@ header h1 {
   color: var(--color-primario);
 }
 
-.section {
-  display: grid;
-  gap: 20px;
-  height: 100vh;
-
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
 /* Proyectos */
 .proyecto {
   max-width: 340px;
@@ -207,4 +198,13 @@ footer {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   font-weight: bold;
+}
+
+#proyectos div {
+  display: grid;
+  gap: 20px;
+  height: 100vh;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
