@@ -90,6 +90,15 @@ header h1 {
   color: var(--color-primario);
 }
 
+.section {
+  display: grid;
+  gap: 20px;
+  height: 100vh;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
 /* Proyectos */
 .proyecto {
   max-width: 340px;
